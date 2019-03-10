@@ -1,6 +1,9 @@
 package com.app.bean;
 
 public class Match {
+	public Match() {
+		
+	}
 	private int donar_id;
 	private int recipient_id;
 	private String date_time;

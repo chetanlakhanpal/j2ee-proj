@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class AuthenticationFilter
  */
+@WebFilter({"/dashboard", "/profile"})
 public class AuthenticationFilter implements Filter {
 
     /**
@@ -38,18 +39,17 @@ public class AuthenticationFilter implements Filter {
 		// TODO Auto-generated method stub
 		// place your code here
 		HttpServletRequest servletRequest = (HttpServletRequest) request;
-		// pass the request along the filter chain
-		if(servletRequest.getRequestURI().startsWith("/blood-donation/dashboard") || 
-				servletRequest.getRequestURI().startsWith("/blood-donation/profile")) {
-			HttpSession session = servletRequest.getSession();
-			if(session.getAttribute("email") == null){
-				System.out.println("In Filter");
-				HttpServletResponse response2 = (HttpServletResponse) response;
-				response2.sendRedirect("/blood-donation/login");
-				return;
-			}
+		HttpServletResponse servletResponse = (HttpServletResponse) response;
+
+		HttpSession session = servletRequest.getSession();
+		String appName = (String) request.getServletContext().getAttribute("APP_NAME");
+
+		if(session.getAttribute("user") == null) {
+			servletResponse.sendRedirect(appName+ "/login");
+			return;
 		}
-		chain.doFilter(request, response);
+	
+		chain.doFilter(servletRequest, servletResponse);
 	}
 
 	/**

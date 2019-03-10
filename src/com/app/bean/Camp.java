@@ -1,26 +1,27 @@
 package com.app.bean;
 
+import java.sql.Timestamp;
+import java.util.Date;
+
 public class Camp {
+	public Camp() {
+		
+	}
+	
 	private int id;
-	private String name;
 	private String venue;
 	private String email;
 	private String mobile_no;
 	private String city;
-	private String estimated_donates;
-	private String date;
+	private short estimatedDonations;
+	private Date date;
+	private Timestamp created_at;
 	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
 	}
 	public String getVenue() {
 		return venue;
@@ -46,16 +47,22 @@ public class Camp {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getEstimated_donates() {
-		return estimated_donates;
+	public short getEstimatedDonations() {
+		return estimatedDonations;
 	}
-	public void setEstimated_donates(String estimated_donates) {
-		this.estimated_donates = estimated_donates;
+	public void setEstimatedDonations(short estimatedDonations) {
+		this.estimatedDonations = estimatedDonations;
 	}
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
+	}
+	public Timestamp getCreated_at() {
+		return created_at;
+	}
+	public void setCreated_at(Timestamp created_at) {
+		this.created_at = created_at;
 	}
 }

@@ -28,9 +28,11 @@ public class LogoutServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String appName = (String) request.getServletContext().getAttribute("APP_NAME");
+
 		HttpSession session = request.getSession();
 		session.invalidate();
-		response.sendRedirect("/");
+		response.sendRedirect(appName + "/");
 	}
 
 	/**

@@ -6,23 +6,45 @@ public class User {
 	public User() {}
 	
 	private int id;
-	private char is_admin;
+	private String is_admin;
 	private String name;
 	private String email;
 	private String contact_no;
 	private String dob;
+	private String bloodGroup;
+	private char age;
+	private Timestamp created_at;
+	private Timestamp updated_at;
 	
+	public String getBloodGroup() {
+		return bloodGroup;
+	}
+	public void setBloodGroup(String bloodGroup) {
+		this.bloodGroup = bloodGroup;
+	}
+	public Timestamp getCreated_at() {
+		return created_at;
+	}
+	public void setCreated_at(Timestamp created_at) {
+		this.created_at = created_at;
+	}
+	public Timestamp getUpdated_at() {
+		return updated_at;
+	}
+	public void setUpdated_at(Timestamp updated_at) {
+		this.updated_at = updated_at;
+	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public char getIs_admin() {
+	public String getIs_admin() {
 		return is_admin;
 	}
-	public void setIs_admin(char is_admin) {
-		this.is_admin = is_admin;
+	public void setIs_admin(String string) {
+		this.is_admin = string;
 	}
 	public String getName() {
 		return name;
@@ -54,7 +76,5 @@ public class User {
 	public void setAge(char age) {
 		this.age = age;
 	}
-	private char age;
-	private Timestamp created_at;
-	private Timestamp updated_at;
+
 }
