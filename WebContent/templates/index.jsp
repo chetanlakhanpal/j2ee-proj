@@ -15,7 +15,7 @@
           <p class="lead text-muted">Help someone live longer, by making a small contribution</p>
           <p>
             <a href="#" class="btn btn-primary my-2">Explore camps !</a>
-            <a href="/register" class="btn btn-secondary my-2">Register as a Donor</a>
+            <a href="./register" class="btn btn-secondary my-2">Register as a Donor</a>
           </p>
         </div>
       </section>

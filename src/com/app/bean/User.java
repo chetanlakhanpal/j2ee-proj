@@ -12,7 +12,6 @@ public class User {
 	private String contact_no;
 	private String dob;
 	private String bloodGroup;
-	private char age;
 	private Timestamp created_at;
 	private Timestamp updated_at;
 	
@@ -69,12 +68,6 @@ public class User {
 	}
 	public void setDob(String dob) {
 		this.dob = dob;
-	}
-	public char getAge() {
-		return age;
-	}
-	public void setAge(char age) {
-		this.age = age;
 	}
 
 }
